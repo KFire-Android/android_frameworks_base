@@ -773,10 +773,10 @@ public class LGEStarRIL extends RIL implements CommandsInterface {
                                         new AsyncResult (null, ret, null));
                 }
             break;
-            case RIL_UNSOL_DATA_CALL_LIST_CHANGED:
-                if (RILJ_LOGD) unsljLogRet(response, ret);
-
-                mDataNetworkStateRegistrants.notifyRegistrants(new AsyncResult(null, ret, null));
+			case RIL_UNSOL_DATA_CALL_LIST_CHANGED:
+				if (RILJ_LOGD) unsljLogRet(response, ret);
+					if(ret==null) break;
+				mDataNetworkStateRegistrants.notifyRegistrants(new AsyncResult(null, ret, null));
             break;
 
             case RIL_UNSOL_SUPP_SVC_NOTIFICATION:
