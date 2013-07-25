@@ -1142,4 +1142,7 @@
         <item>com.android.inputmethod.latin</item>
     </string-array>
 
+    <!-- NEW HASHCODE CHANGES -->
+    <bool name="config_hasVolumeRocker">true</bool>
+
 </resources>
